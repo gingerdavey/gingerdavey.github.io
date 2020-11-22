@@ -13,7 +13,7 @@
 /* BASE */
 body{ font-family: 'Poppins', sans-serif; font-weight: 500; @apply duration-200; }
 h1{ font-size: 40px; line-height: 0.9; white-space: nowrap; }
-h1 span, h3 span{
+h1 span, h2 span, h3 span{
     color: theme('colors.main-orange');
     background: -webkit-linear-gradient(45deg, theme('colors.main-orange'), #FF9014, theme('colors.main-orange'));
     -webkit-background-clip: text;

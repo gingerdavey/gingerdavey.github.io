@@ -16,7 +16,7 @@ module.exports = function (grunt) {
             dist: {
                 expand: true,
                 cwd: '<%= themelibraryPath %>/tailwind',
-                src: ['**/*.css'],
+                src: ['tailwind.css'],
                 dest: '<%= themelibraryPath %>/css',
                 ext: '.css'
             }
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         // Watch for changes and run Tasks
         watch: {
             postcss: {
-                files: '<%= themelibraryPath %>/tailwind/**/*.css',
+                files: '<%= themelibraryPath %>/tailwind/tailwind.css',
                 tasks: ['compile-tailwindcss'],
                 options: {
                     interrupt: true
@@ -38,6 +38,7 @@ module.exports = function (grunt) {
     // Load Grunt Plugins
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-postcss')
+    grunt.loadNpmTasks('grunt-css-import');
 
     // Register Tasks
     grunt.registerTask('compile-tailwindcss', ['postcss'])

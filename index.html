@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <nav class="sticky w-100">
+    <nav class="sticky top-0 bg-white w-100 z-10">
       <div class="container mx-auto flex flex-wrap p-6">
         <div class="w-full lg:w-3/4">
           <p class="text-base lg:text-xl font-semibold text-center lg:text-left mb-8 lg:mb-0"><a href="#">Robbie Davey Development</a></p>
@@ -86,16 +86,14 @@
           <h2 class="font-semibold mb-4">Portfolio</h2>
         </div>
         <div class="w-full">
-          <div class="portfolio-background bg-left bg-contain bg-no-repeat" style="background-image: url(./library/images/portfolio-background.svg);">
-          <div class="max-w-sm w-full lg:max-w-full lg:flex">
-            <div class="h-48 lg:h-auto w-full lg:w-1/3 flex-none bg-cover border border-solid sm:border-b-0 lg:border-r-0 sm:rounded-t-lg lg:rounded-l-lg lg:rounded-t-none border-gray-400  text-center overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url('/library/images/portfolio/jack-ellis-plastering.png')" title="Woman holding a mug">
+          <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2">
+              <h3 class="font-semibold"><span>Jack Ellis</span> Plastering</h3>
+              <p class="text-gray-700 text-base mb-6">I created a simple but stylish site for Jack Ellis Plastering.The site has been fully optimised and is SEO ready. I had full control in the design of the site and it is fully responsive.</p>
+              <a href="http://jackellis-plastering.co.uk/" class="main-button text-white py-2 px-4 rounded" target="_blank" rel="nofollow">View Website</a>  
             </div>
-            <div class="w-full lg:w-2/3 bg-white p-8 flex flex-col border border-solid border-gray-400 sm:rounded-b-lg lg:rounded-r-lg lg:rounded-b-none justify-between">
-              <div class=" z-0">
-                <div class="text-gray-900 font-bold text-xl mb-2">Jack Ellis Plastering</div>
-                <p class="text-gray-700 text-base mb-6">I created a simple but stylish site for Jack Ellis Plastering.The site has been fully optimised and is SEO ready. I had full control in the design of the site and it is fully responsive.</p>
-                <a href="http://jackellis-plastering.co.uk/" class="main-button text-white py-2 px-4 rounded" target="_blank" rel="nofollow">View Website</a>
-              </div>
+            <div class="w-full lg:w-1/2">
+              <img src="./library/images/Phone-2.png" alt="Phone Image of Jack Ellis Plastering">
             </div>
           </div>
           </div>
@@ -127,5 +125,21 @@
       </div>
     </footer>
     
+    <script>
+
+      const nav = document.querySelector('nav');  
+
+      window.addEventListener('scroll', function(e){
+        scroll = window.scrollY
+
+        if(scrollY > 10){
+          nav.classList.add('on-scroll');
+        } else {
+          nav.classList.remove('on-scroll');
+        }
+
+      });
+    </script>
+
 </body>
 </html>

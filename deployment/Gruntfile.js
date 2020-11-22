@@ -47,4 +47,5 @@ module.exports = function (grunt) {
 
     //FOR PRODUCTION RUN THIS COMMAND
     // $env:NODE_ENV="production"
+    // export NODE_ENV=production
 }

@@ -2,7 +2,6 @@
 :root{
     --text-main-color : theme('colors.main-orange');
 }
-
 /*ROOT END */
 
 /* Tailwind */
@@ -10,15 +9,10 @@
 @tailwind components;
 
 /* STYLES */
-body{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    @apply duration-200;
-}
-h1{
-    font-size: 40px; line-height: 0.9;
-    white-space: nowrap;
-}
+
+/* BASE */
+body{ font-family: 'Poppins', sans-serif; font-weight: 500; @apply duration-200; }
+h1{ font-size: 40px; line-height: 0.9; white-space: nowrap; }
 h1 span, h3 span{
     color: theme('colors.main-orange');
     background: -webkit-linear-gradient(45deg, theme('colors.main-orange'), #FF9014, theme('colors.main-orange'));
@@ -34,18 +28,10 @@ h1 span{
     width: 0%;
     animation: fullWidth 1.2s linear 0.6s forwards, backgroundColour 4s linear 0.5s infinite;
 }
-h3 span{
-    animation: backgroundColour 4s linear 0.5s infinite;
-}
-h2{
-    font-size: 35px;
-}
-a:hover{
-    @apply duration-200;
-}
-.main-bg{
-    background-color: theme('colors.main-orange');
-}
+h3 span{ animation: backgroundColour 4s linear 0.5s infinite; }
+h2{ font-size: 35px }
+a:hover{ @apply duration-200; }
+.main-bg{ background-color: theme('colors.main-orange'); }
 .main-button{
     background-color: transparent;
     overflow: hidden;
@@ -64,29 +50,18 @@ a:hover{
     z-index: -1;
     transition: 0.6s;
 }
-.main-button:before{
-    background-color: theme('colors.main-orange');
-    width: 100%;
-    height: 100%;
-}
-.main-button:after{
-    background-color: #FF9014;
-    width: 0%;
-    height: 110%;
-    border-radius: 20px;
-    left: -50%;
-    transition: 1s;
-}
+.main-button:before{ background-color: theme('colors.main-orange'); width: 100%; height: 100%; }
+.main-button:after{ background-color: #FF9014; width: 0%; height: 110%; border-radius: 20px; left: -50%; transition: 0.8s; }
 .main-button:hover:after{ width: 200%; }
 .main-light-bg{ background-color: theme('colors.main-light-orange'); }
 .text-main-orange{ color: theme('colors.main-orange'); }
 .text-main-light-orange{ color: theme('colors.main-light-orange'); }
-nav ul li a{
-    @apply block mt-4 inline-block mt-0 text-black font-semibold mr-4;
-}
-nav ul li a:hover{
-    color: var(--text-main-color);
-}
+
+/* NAV */
+nav ul li a{ @apply block mt-4 inline-block mt-0 text-black font-semibold mr-4; }
+nav ul li a:hover{ color: var(--text-main-color); }
+nav{ transition: 0.3s; }
+nav.on-scroll{ box-shadow: 0 0 7px -1px rgba(0,0,0,0.7); transition: 0.3s; }
 .scroll-down-arrow{
     width: 35px;
     height: 35px;
@@ -94,16 +69,24 @@ nav ul li a:hover{
     margin: auto;
     animation: moveUpDown 2s linear infinite;
 }
+
+
+/* SECTION */
 .service-card{ text-align: center; }
 .service-card h3{ font-size:24px; margin-bottom: 10px; }
 .service-card img{ width: 100%; height: 300px; margin: auto; margin-bottom: 20px; }
 .service-card p { max-width: min(320px, 100%); margin: auto; display: block; }
 .portfolio-background{ padding: 100px 60px; }
+
+
+/*FOOTER */
 .contact{ height: 250px; color: #fff; }
 .contact p{ font-size:18px; }
 footer ul li a{ @apply block mt-4 inline-block mt-0 text-black font-semibold mr-4; }
 footer ul li a:hover{ color: var(--text-main-color); } 
 
+
+/* RESPONSIVE */
 @media screen and (max-width:1023px){
     h1{  font-size: 28px; }
     h1 span{ font-size: 38px; }
@@ -114,20 +97,15 @@ footer ul li a:hover{ color: var(--text-main-color); }
     }
 }
 
-@keyframes fullWidth {
-    0%{   width: 0%; }
-    100%{ width: 100%; }
-}
-@keyframes backgroundColour {
-    0%{   background-position: 0%; }
-    100%{ background-position: 200%; }
-}
-@keyframes moveUpDown {
-    0%{   transform: translateY(0px); }
-    50%{  transform: translateY(-20px); }
-    100%{ transform: translateY(0px) }
-}
+
+/* ANIMATIONS */
+@keyframes fullWidth { 0%{   width: 0%; } 100%{ width: 100%; } }
+@keyframes backgroundColour { 0%{   background-position: 0%; } 100%{ background-position: 200%; } }
+@keyframes moveUpDown { 0%{   transform: translateY(0px); } 50%{  transform: translateY(-20px); } 100%{ transform: translateY(0px) } }
+
+
 /* END STYLES */
+
 
 /* Tailwind */
 @tailwind utilities;

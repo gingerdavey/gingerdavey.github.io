@@ -5,73 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robbie Davey Development</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- PURCHSE FULL FULLPAGE LICENCE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./library/css/tailwind.css">
     <link rel="stylesheet" href="./library/css/animate.css">
 </head>
 <body>
 
-    <nav class="sticky top-0 bg-white w-100 z-10">
-      <div class="container mx-auto flex flex-wrap p-6">
-        <div class="w-full lg:w-3/4">
-          <p class="text-base lg:text-xl font-semibold text-center lg:text-left mb-8 lg:mb-0"><a href="#">Robbie Davey Development</a></p>
-        </div>
-        <div class="w-full lg:w-1/4">
-          <ul class="flex flex-wrap justify-center lg:justify-end">
-            <li> <a href="#about">About</a> </li>
-            <li> <a href="#portfolio">Portfolio</a> </li>
-            <li> <a href="#contact">Contact</a> </li>
-          </ul>
-        </div>
+  <nav class="fixed w-full top-0 bg-white transition duration-700 w-100 z-10">
+    <div class="container mx-auto flex flex-wrap p-6">
+      <div class="w-full lg:w-2/4">
+        <p class="text-base lg:text-xl font-semibold text-center lg:text-left mb-8 lg:mb-0"><a href="#">Robbie Davey Development</a></p>
       </div>
-    </nav>
+      <div class="w-full lg:w-2/4">
+        <ul id="navMenu" class="flex flex-wrap justify-center lg:justify-end">
+          <li><a data-menuanchor="s-home"  href="#section-home" class="active">Home</a></li>
+          <li><a data-menuanchor="s-about" href="#section-about">About</a></li>
+          <li><a data-menuanchor="s-services" href="#section-services">Services</a></li>
+          <li><a data-menuanchor="s-portfolio"  href="#section-portfolio">Portfolio</a></li>
+          <li><a data-menuanchor="s-contact" href="#section-contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section class="header w-full">
-      <div class="container mx-auto flex flex-wrap p-6">
-          <div class="w-full lg:w-1/2 wow fadeInLeft">
-            <div class="header__left flex justify-center items-center h-full">
-              <div class="header__left_center">
-                <h1 class="font-bold mb-5"><span>Creative</span> Web Development</h1>
-                <p class="mb-5">Professional WordPress and Static site development to suit all your business needs.</p>
-                <a href="#" class="main-button text-white py-2 px-4 rounded" >Get Started</a>
+  <div id="fullpage">
+    <section id="section-home" class="section">
+      <div class="header w-full">
+        <div class="container mx-auto flex flex-wrap px-6">
+            <div class="w-full lg:w-1/2">
+              <div class="header__left flex justify-center items-center h-full">
+                <div class="header__left_center lg:pr-10">
+                  <h1 class="font-bold mb-5"><span>Creative</span> Web Development</h1>
+                  <p class="mb-5">Professional WordPress and Static site development to suit all your business needs.</p>
+                  <a href="#" class="main-button text-white py-2 px-4 rounded" >Get Started</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="w-full lg:w-1/2 wow fadeInRight">
-            <div class="header__right">
-              <img class="Px-4 py-8 lg:px-16 lg:py-0" src="./library/images/header-image.svg" alt="Man coding on computer">
-            </div>
-          </div> 
-      </div>
-      <div class="w-full">
-        <p class="text-center">
-            <img class="scroll-down-arrow" src="./library/images/scroll-down.svg" alt="Scroll down arrow">
-        </p>
+            <div class="w-full lg:w-1/2">
+              <div class="header__right">
+                <img class="Px-4 py-8 lg:px-16 lg:py-0" style="max-width: 85%; margin: auto;" src="./library/images/header-image.svg" alt="Man coding on computer">
+              </div>
+            </div> 
+        </div>
+        <div class="w-full">
+          <p class="text-center">
+              <img class="scroll-down-arrow" src="./library/images/scroll-down.svg" alt="Scroll down arrow">
+          </p>
+        </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container mx-auto flex flex-wrap p-6 py-16">
-        <div class="w-full wow slideInLeft">
-          <h2 class="font-semibold mb-4">About</h2>
-          <p class="mb-6">I'm a web developer based in Cheshire, specialising in WordPress sites and Custom HTML development. I am always developing my skills so I can provide a higher quality service and increased variety to match your development needs.</p>
+    <section id="section-about" class="section bg-about-image">
+      <div class="container mx-auto flex flex-wrap p-6 py-16 ">
+        <div class="w-full lg:w-1/2 wow slideInLeft">
+          <div class="about__left flex justify-center items-center h-full">
+            <div class="about__left_center lg:pr-10">
+              <h2 class="font-semibold mb-4">About</h2>
+              <p class="mb-6">I'm a web developer based in Cheshire, specialising in WordPress sites and Custom HTML development. I am always developing my skills so I can provide a higher quality service and increased variety to match your development needs.</p>
+            </div>
+          </div>          
         </div>
-        <div class="services w-full flex flex-wrap py-16 mt-30">
+        <div class="w-full lg:w-1/2 wow slideInRight">
+          <div class="about__right">
+            <img class="Px-4 py-8 lg:px-16 lg:py-0" style="max-width: 85%; margin: auto;" src="./library/images/about.svg" alt="Man adding section to a web browser">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-services" class="section">
+      <div class="container mx-auto flex flex-wrap p-6 py-16">
+        <div class="services w-full flex flex-wrap py-12 mt-30">
           <div class="w-full lg:w-1/3">
-            <div class="service-card wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="service-card wow slideInLeft">
               <img src="./library/images/responsive-design.svg" loading="lazy" alt="Responsive Design">
               <h3 class="font-semibold"><span>Responsive</span> Design</h3>
               <p>All sites are developed to work across any screen size.</p>
             </div>
           </div>
           <div class="w-full lg:w-1/3">
-            <div class="service-card wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+            <div class="service-card wow slideInUp">
               <img src="./library/images/tailored.svg" loading="lazy" alt="Tailored to your needs">
               <h3 class="font-semibold"><span>Tailored</span> to your needs</h3>
               <p>Custom built to match your brand and the user's needs.</p>
             </div>
           </div>
           <div class="w-full lg:w-1/3">
-            <div class="service-card wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+            <div class="service-card wow slideInRight">
               <img src="./library/images/high-performance.svg" loading="lazy" alt="High Performance">
               <h3 class="font-semibold"><span>High</span> Performance</h3>
               <p>Optimised to be fast loading across any modern browser.</p>
@@ -81,70 +103,97 @@
       </div>
     </section>
 
-    <section id="portfolio">
-      <div class="container mx-auto flex flex-wrap p-6">
-        <div class="w-full wow slideInLeft">
+    <section id="section-portfolio" class="section">
+      <div class="container mx-auto flex flex-wrap px-6 justify-center">
+        <div class="w-full wow slideInLeft" style="padding-top: 10rem;">
           <h2 class="font-semibold mb-4">Portfolio</h2>
         </div>
-        <div class="w-full pt-8">
+        <div class="w-full">
           <div class="flex flex-wrap">
-            <div class="w-full lg:w-1/2 wow fadeInLeft" data-wow-delay="0.8s">
-              <h2 class="font-semibold"><span>Jack Ellis</span> Plastering</h1>
-              <p class="text-gray-700 text-base mb-6">I created a simple but stylish site for Jack Ellis Plastering.The site has been fully optimised and is SEO ready. I had full control in the design of the site and it is fully responsive.</p>
+            <div class="w-full lg:w-1/2 wow slideInLeft">
+              <h3 class="font-semibold"><span>Jack Ellis</span> Plastering</h1>
+              <p class="text-base mb-6">I created a simple but stylish site for Jack Ellis Plastering.The site has been fully optimised and is SEO ready. I had full control in the design of the site and it is fully responsive.</p>
               <a href="http://jackellis-plastering.co.uk/" class="main-button text-white py-2 px-4 rounded" target="_blank" rel="nofollow">View Website</a>  
             </div>
-            <div class="w-full lg:w-1/2 wow fadeInRight" data-wow-delay="0.8s">
+            <div class="w-full lg:w-1/2 wow slideInRight">
               <img src="./library/images/Phone-2.png" alt="Phone Image of Jack Ellis Plastering">
             </div>
           </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact bg-cover pt-10 lg:pt-0 wow slideInUp" style="background-image: url(./library/images/contact-bg.svg);">
-      <div class="container mx-auto h-full flex justify-center items-center py-10">
-        <div class="contact-content text-center">
-            <h2 class="font-semibold mb-4">Contact</h2>
-            <p class="mb-3">Email: robbiegingerdavey@gmail.com</p>
-            <p class="mb-3">Tel: 07593403501</p>
+    <section id="section-contact" class="section">
+      <div class="contact bg-cover pt-10 lg:pt-0 wow slideInUp">
+        <div class="container mx-auto h-full flex justify-center items-center py-20">
+          <div class="contact-content text-center">
+              <h2 class="font-semibold mb-4">Get in touch:</h2>
+              <p class="mb-3">If you have a project or website in mind, then don't hestitate to contact me.</p>
+              <p class="mb-3">Email: <a href='mailto:robbiegingerdavey@gmail.com'>robbiegingerdavey@gmail.com</a></p>
+              <p class="mb-3">Tel: <a href='tel:07593403501'>07593403501</a></p>
+            </div>
+        </div>
+      </div>
+      <footer class="sticky w-100 wow slideInUp">
+        <div class="container mx-auto flex flex-wrap p-4">
+          <div class="w-full lg:w-3/4">
+            <p class="text-base lg:text-xl font-semibold mb-4 lg:mb-0"><a href="#">Robbie Davey Development</a></p>
           </div>
-      </div>
-    </section>
+          <div class="w-full lg:w-1/4">
+            <ul class="flex flex-wrap justify-start lg:justify-end">
+              <li> <a href="#">Terms</a> </li>
+              <li> <a href="#">&copy; Copyright</a> </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>  
 
-    <footer class="sticky w-100">
-      <div class="container mx-auto flex flex-wrap p-6">
-        <div class="w-full lg:w-3/4">
-          <p class="text-base lg:text-xl font-semibold mb-4 lg:mb-0"><a href="#">Robbie Davey Development</a></p>
-        </div>
-        <div class="w-full lg:w-1/4">
-          <ul class="flex flex-wrap justify-start lg:justify-end">
-            <li> <a href="#">Terms</a> </li>
-            <li> <a href="#">&copy; Copyright</a> </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+  </div>
+
+    
     
     <script>
-
       const nav = document.querySelector('nav');  
-
       window.addEventListener('scroll', function(e){
         scroll = window.scrollY
-
-        if(scrollY > 10){
-          nav.classList.add('on-scroll');
-        } else {
-          nav.classList.remove('on-scroll');
-        }
-
+        if(scrollY > 10){ nav.classList.add('on-scroll'); } else { nav.classList.remove('on-scroll'); }
       });
     </script>
     <script src="./library/js/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" crossorigin="anonymous"></script>
     <script>
-      new WOW().init();
-      </script>
+      //new WOW().init();
+      new fullpage('#fullpage', { 
+        animateAnchor: true,
+        scrollBar: true,
+        anchors: ['s-home', 's-about', 's-services', 's-portfolio','s-contact'],
+        lockAnchors: true,
+	      menu: '#navMenu',
+        autoScrolling:true,
+        scrollHorizontally: false,
+        navigation: true,
+        navigationPosition: 'right',
+        fitToSection: true,
+        afterRender: function(){
+          new WOW().init();
+        },
+        onLeave: function(origin, destination, direction){
+          var leavingSection = this;
+          console.log(destination.index);
+          if( destination.index != 0 ){ nav.classList.add('onScroll') } else { nav.classList.remove('onScroll'); }
+          if((destination.index == 1) || (destination.index == 4) ){
+             nav.classList.add('nav-transparent'); 
+             if(nav.classList.contains('onScroll')){
+              console.log('it contains');
+              nav.classList.remove('onScroll');
+            }
+          } else { 
+            nav.classList.remove('nav-transparent');
+          }
+        },
+      });
+    </script>
 
 </body>
 </html>

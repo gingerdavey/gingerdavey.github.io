@@ -41,6 +41,9 @@ nav{ transition: 0.3s; }
 /* nav.onScroll{ box-shadow: 0 0 7px -1px rgba(0,0,0,0.7); transition: 0.5s; } */
 .scroll-down-arrow{ width: 35px; height: 35px; display: block; margin: auto; animation: moveUpDown 2s linear infinite; }
 
+/* HEADER */
+.header__right img, .about__right img{ max-width: 90%; margin: auto; }
+
 /* ABOUT */
 .bg-about-image{ background-image: url('../images/bg-about.svg'); background-size: auto 100%; background-repeat: no-repeat; background-position: center right; background-color: var(--main-dark-orange); }
 .bg-about-image h1, .bg-about-image h2, .bg-about-image h3, .bg-about-image h4, .bg-about-image h5, .bg-about-image h6, .bg-about-image p{ @apply text-white; }
@@ -71,10 +74,12 @@ footer ul li a:hover{ color: var(--text-main-color); }
 @media screen and (max-width:992px){
     html{ font-size: 14px; }
 
+    .header__right img, .about__right img{ max-width: 70%; }
+
     .bg-about-image{ background-image: none; }
 
     .service-card h3{ font-size: 14px; margin-bottom: 5px; }
-    .service-card img{ width: 80%; height: auto;}
+    .service-card img{ width: 80%; height: auto; margin-bottom: 10px; }
     .service-card p{ font-size: 12px; padding: 0px 10px; }
 
     .portfolio-container{ padding-right: 30px; }
@@ -82,6 +87,10 @@ footer ul li a:hover{ color: var(--text-main-color); }
 
     .contact-content{ width: 80%; padding: 0px 15px; }
     .contact p{ font-size: 16px; }
+
+    footer ul li{ line-height: 14px; }
+    footer ul li a{ font-size: 10px; }
+    footer div p.text-base{ font-size: 10px; margin-bottom: 0px; }
 }
 
 /* ANIMATIONS */

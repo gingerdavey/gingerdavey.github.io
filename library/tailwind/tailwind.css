@@ -69,7 +69,19 @@ footer ul li a:hover{ color: var(--text-main-color); }
     }
 }
 @media screen and (max-width:992px){
-    .service-card h3{ font-size: 20px; }
+    html{ font-size: 14px; }
+
+    .bg-about-image{ background-image: none; }
+
+    .service-card h3{ font-size: 14px; margin-bottom: 5px; }
+    .service-card img{ width: 80%; height: auto;}
+    .service-card p{ font-size: 12px; padding: 0px 10px; }
+
+    .portfolio-container{ padding-right: 30px; }
+    .portfolio-container h3{ font-size: 22px; }
+
+    .contact-content{ width: 80%; padding: 0px 15px; }
+    .contact p{ font-size: 16px; }
 }
 
 /* ANIMATIONS */

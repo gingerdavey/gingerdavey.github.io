@@ -10,7 +10,8 @@ module.exports = function (grunt) {
                 map: true, // inline sourcemaps
                 processors: [
                     require('tailwindcss')(),
-                    require('autoprefixer')({ browsers: 'last 2 versions' }) // add vendor prefixes
+                    require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
+                    require('cssnano')() // minify the result
                 ]
             },
             dist: {
@@ -18,7 +19,7 @@ module.exports = function (grunt) {
                 cwd: '<%= themelibraryPath %>/tailwind',
                 src: ['tailwind.css'],
                 dest: '<%= themelibraryPath %>/css',
-                ext: '.css'
+                ext: '.min.css'
             }
         },
 

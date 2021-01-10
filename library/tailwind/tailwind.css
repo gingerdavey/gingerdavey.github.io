@@ -73,7 +73,7 @@ footer ul li a:hover{ color: var(--text-main-color); }
 }
 @media screen and (max-width:992px){
     html{ font-size: 14px; }
-    body{ overflow: hidden !important; }
+    body{ overflow: hidden !important; width:100%; }
 
     .header__right img, .about__right img{ max-width: 70%; }
 

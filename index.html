@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- PURCHSE FULL FULLPAGE LICENCE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./library/css/fullpage.min.css" />
     <link rel="stylesheet" href="./library/css/tailwind.min.css">
     <link rel="stylesheet" href="./library/css/animate.css">
 </head>
@@ -153,10 +153,12 @@
     const nav = document.querySelector('nav');  
     /* window.addEventListener('scroll', function(e){ scroll = window.scrollY; if(scrollY > 10){ nav.classList.add('on-scroll'); } else { nav.classList.remove('on-scroll'); }  }); */
   </script>
-  <script src="./library/js/wow.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./library/js/wow.min.js"></script>
+  <script type="text/javascript" src="http://127.0.0.1:5500/library/js/fullpage.min.js"></script>
+
   <script>
     new fullpage('#fullpage', { 
+      licenseKey: '9B8407C4-305841AD-9A8D7EA6-1320F6B9',
       animateAnchor: true, scrollBar: true,
       anchors: ['s-home', 's-about', 's-services', 's-portfolio','s-contact'],
       lockAnchors: true, menu: '#navMenu', autoScrolling:true, scrollHorizontally: false, navigation: true, navigationPosition: 'right', fitToSection: true,

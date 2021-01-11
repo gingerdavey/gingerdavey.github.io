@@ -97,6 +97,9 @@ footer ul li a:hover{ color: var(--text-main-color); }
     footer ul li a{ font-size: 10px; }
     footer div p.text-base{ font-size: 10px; margin-bottom: 0px; }
 
+}
+
+@media screen and (max-width:767px){
     /* Disable animations on mobile */
     .wow{ transition: none !important; visibility: visible !important; transform: none !important; }
 }

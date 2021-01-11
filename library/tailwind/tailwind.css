@@ -61,6 +61,7 @@ nav{ transition: 0.3s; }
 footer ul li a{ @apply block mt-4 inline-block mt-0 text-black font-semibold mr-4; }
 footer ul li a:hover{ color: var(--text-main-color); } 
 
+
 /* RESPONSIVE */
 @media screen and (max-width:1023px){
     h1{  font-size: 28px; }
@@ -95,6 +96,9 @@ footer ul li a:hover{ color: var(--text-main-color); }
     footer ul li{ line-height: 14px; }
     footer ul li a{ font-size: 10px; }
     footer div p.text-base{ font-size: 10px; margin-bottom: 0px; }
+
+    /* Disable animations on mobile */
+    .wow{ transition: none !important; visibility: visible !important; transform: none !important; }
 }
 
 /* ANIMATIONS */

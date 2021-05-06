@@ -13,9 +13,9 @@
 
 /* BASE */
 body{ font-family: 'Poppins', sans-serif; font-weight: 500; @apply duration-200; }
-h1{ font-size: 40px; line-height: 0.9; white-space: nowrap; }
+h1{ font-size: 40px; line-height: 0.9; }
 h1 span, h2 span, h3 span{ color: theme('colors.main-orange'); background: -webkit-linear-gradient(45deg, theme('colors.main-orange'), #FF9014, theme('colors.main-orange')); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; overflow: hidden; }
-h1 span{ display: block; font-size: 5.5rem; width: 100%; animation: backgroundColour 4s linear 0.5s infinite; /* fullWidth 1.2s linear 0.6s forwards, */ }
+h1 span{ animation: backgroundColour 4s linear 0.5s infinite; /* fullWidth 1.2s linear 0.6s forwards, */ }
 h3 span{ animation: backgroundColour 4s linear 0.5s infinite; }
 h2{ font-size: 35px }
 h3{ font-size: 26px; }
@@ -29,6 +29,7 @@ a:hover{ @apply duration-200; }
 .main-light-bg{ background-color: theme('colors.main-light-orange'); }
 .text-main-orange{ color: theme('colors.main-orange'); }
 .text-main-light-orange{ color: theme('colors.main-light-orange'); }
+
 
 /* NAV */
 nav ul li a{ @apply block mt-4 inline-block mt-0 text-black font-semibold mr-4;  }
@@ -45,7 +46,7 @@ nav{ transition: 0.3s; }
 .header__right img, .about__right img{ max-width: 90%; margin: auto; }
 
 /* ABOUT */
-.bg-about-image{ background-image: url('../images/bg-about.svg'); background-size: auto 100%; background-repeat: no-repeat; background-position: center right; background-color: var(--main-dark-orange); }
+.bg-about-image{ background-image: url('../images/bg-about.svg'); background-size: auto 100%; background-repeat: no-repeat; background-position: center right; background-color: var(--main-dark-orange); transition: 0.5s;}
 .bg-about-image h1, .bg-about-image h2, .bg-about-image h3, .bg-about-image h4, .bg-about-image h5, .bg-about-image h6, .bg-about-image p{ @apply text-white; }
 
 /* SECTION */
@@ -56,7 +57,8 @@ nav{ transition: 0.3s; }
 .portfolio-background{ padding: 100px 60px; }
 
 /*FOOTER */
-.contact{ height:100%; color: #fff; background-color: var(--main-dark-orange); }
+#section-contact{ background-color: var(--main-dark-orange); }
+.contact{ height:100%; color: #fff;  }
 .contact p{ font-size:18px; }
 footer ul li a{ @apply block mt-4 inline-block mt-0 text-black font-semibold mr-4; }
 footer ul li a:hover{ color: var(--text-main-color); } 
@@ -65,12 +67,12 @@ footer ul li a:hover{ color: var(--text-main-color); }
 /* RESPONSIVE */
 @media screen and (max-width:1023px){
     h1{  font-size: 28px; }
-    h1 span{ font-size: 38px; }
     h2{ font-size:26px; }
     nav ul li a{ margin: 0px 10px; }
     .portfolio-background{
         padding: 20px;
     }
+    .bg-about-image{ background-position: -100% 100%; }
 }
 @media screen and (max-width:992px){
     html{ font-size: 14px; }
@@ -78,7 +80,7 @@ footer ul li a:hover{ color: var(--text-main-color); }
 
     .header__right img, .about__right img{ max-width: 70%; }
 
-    .bg-about-image{ background-image: none; }
+    .bg-about-image{ background-position: -40% 100%; }
 
     .service-card h3{ font-size: 14px; margin-bottom: 5px; }
     .service-card img{ width: 80%; height: auto; margin-bottom: 0px; }
@@ -102,6 +104,7 @@ footer ul li a:hover{ color: var(--text-main-color); }
 @media screen and (max-width:767px){
     /* Disable animations on mobile */
     .wow{ transition: none !important; visibility: visible !important; transform: none !important; }
+    .section{ padding-right: 50px;}
 }
 
 /* ANIMATIONS */

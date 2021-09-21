@@ -40,7 +40,7 @@ nav{ transition: 0.3s; }
 .nav-transparent a:hover{ @apply text-black; }
 /*.nav-transparent ul li a { @apply text-black; }*/
 /* nav.onScroll{ box-shadow: 0 0 7px -1px rgba(0,0,0,0.7); transition: 0.5s; } */
-.scroll-down-arrow{ width: 35px; height: 35px; display: block; margin: auto; animation: moveUpDown 2s linear infinite; }
+.scroll-down-arrow{ width: 25px; height: 25px; display: block; margin: auto; animation: moveUpDown 2s linear infinite; }
 
 /* HEADER */
 .header__right img, .about__right img{ max-width: 90%; margin: auto; }
@@ -110,7 +110,7 @@ footer ul li a:hover{ color: var(--text-main-color); }
 /* ANIMATIONS */
 @keyframes fullWidth { 0%{   width: 0%; } 100%{ width: 100%; } }
 @keyframes backgroundColour { 0%{   background-position: 0%; } 100%{ background-position: 200%; } }
-@keyframes moveUpDown { 0%{   transform: translateY(0px); } 50%{  transform: translateY(-20px); } 100%{ transform: translateY(0px) } }
+@keyframes moveUpDown { 0%{   transform: translateY(0px); } 50%{  transform: translateY(-15px); } 100%{ transform: translateY(0px) } }
 
 /* END STYLES */
 
